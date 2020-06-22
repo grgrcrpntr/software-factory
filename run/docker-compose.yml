@@ -28,6 +28,7 @@ services:
       - sonarnet
     ports:
       - '9000:9000'
+      - '9092:9092'
     environment:
       - sonar.jdbc.username=sonar
       - sonar.jdbc.password=
