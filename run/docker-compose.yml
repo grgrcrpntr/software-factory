@@ -15,7 +15,7 @@ services:
 
   sonarqube:
     depends_on:
-        - db
+        - db-sonar
     image: sonarqube:lts
     container_name: sonarqube
     volumes:
