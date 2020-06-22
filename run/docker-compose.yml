@@ -17,7 +17,7 @@ services:
     depends_on:
         - db
     image: sonarqube:lts
-    container_name: poc_sf_sonarqube
+    container_name: sonarqube
     volumes:
       - sonarqube_conf:/opt/sonarqube/conf
       - sonarqube_data:/opt/sonarqube/data
@@ -32,9 +32,9 @@ services:
       - sonar.jdbc.password=
       - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
 
-  db:
+  db-sonar:
     image: postgres
-    container_name: poc_sf_db
+    container_name: db-sonar
     networks:
       - sonarnet
     environment:
