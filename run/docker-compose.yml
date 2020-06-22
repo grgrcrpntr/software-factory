@@ -30,7 +30,7 @@ services:
     environment:
       - sonar.jdbc.username=sonar
       - sonar.jdbc.password=
-      - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
+      - sonar.jdbc.url=jdbc:postgresql://db-sonar:5432/sonar
 
   db-sonar:
     image: postgres
